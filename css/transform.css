@@ -1,0 +1,170 @@
+/* Основные стили */
+
+/* 2D */
+.content__2D .content__block div, .content__3D .content__wrapper3d div {
+	display: flex;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 1px;
+	text-align: center;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+}
+
+/* translate */
+.content{
+	background-color: rgba(0, 255, 255, 0.651);
+	color: #051131;
+	padding: 30px;
+	margin: 0;
+	height: 200px;
+	width: 200px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+/* rotate  */
+.content__rotate {
+	transform: rotate(0deg);
+	background-color: #2f87c2;
+}
+
+/* skew */
+.content__skew {
+	transform: skew(0deg, 0deg);
+	background-color: #7de2cc;
+}
+/* .content__skew:hover {
+	transform: skew(10deg, 0deg);
+} */
+/* matrix */
+.content__matrix {
+	transform: matrix(1, 0, 0, 1, 0, 0);
+	background-color: #73bbd1;
+}
+/* multi */
+.content__multi {
+	background-color: #19b493;
+	transform: translate(-10px, 10px) scale(0.7) rotate(45deg);
+}
+
+/* transform-origin */
+.content__transform-origin {
+	background-color: #1eda8b;
+	transform-origin: top left;
+	transform: rotate(40deg);
+}
+/* .content__transform-origin:hover {
+	;
+} */
+
+/* 3D */
+.content__wrapper3d {
+	width: 200px;
+	height: 200px;
+	background-color: rgba(255, 255, 255, 0.1);
+	perspective-origin: center;
+	perspective: 400px;
+}
+
+/* perspective */
+.content__perspective {
+	background-color: #71cc8c;
+	transform: rotateX(50deg);
+
+}
+
+/* translate3D */
+.content__translate3d {
+	transform: translate3D(30px, 20px, 50px);
+	background-color: #45c7868c;
+}
+
+/* scale3D */
+.content__scale3d {
+	transform: scale3d(1, 1, 1);
+	background-color: #56b8a2c5;
+}
+/* rotate3D  */
+.content__rotate3d {
+	transform: rotate3d(1, 1, 1, 0deg);
+	background-color: #41b973;
+}
+.content__rotate3d:hover {
+	transform: rotate3d(1, 1, 1, 45deg);
+}
+
+/* matrix3d */
+
+/* Multi3D */
+.content__multi3d {
+	background-color: #45796c;
+	transform: translate3d(20px, 20px, 20px) rotate3d(1, 1, 1, 10deg);
+}
+
+/* transform-style */
+
+.content__transform-style-wrapper {
+	width: 150px;
+	height: 150px;
+	background-color: rgba(126, 118, 233, 0.623);
+	perspective: 400px;
+	transform-style: preserve-3d;
+}
+.content__transform-style {
+	display: flex;
+	text-transform: uppercase;
+	justify-content: center;
+	align-items: center;
+	letter-spacing: 1px;
+	text-align: center;
+	transition: all 0.8s ease 0s;
+	width: 150px;
+	height: 150px;
+	transform: rotateX(0deg);
+	position: relative;
+	top: 10px;
+	left: 20px;
+	background-color: #829fc5;
+}
+.content__transform-style:hover {
+	transform: rotateX(50deg);
+}
+
+/* Flip */
+.flip__body {
+	margin: 0;
+	position: relative;
+	width: 150px;
+	height: 150px;
+	transition: all 0.8s ease 0s;
+	transform-style: preserve-3d;
+}
+.flip__front, .flip__back {
+	margin: 0;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.flip__front {
+	z-index: 2;
+	transform: rotateY(0deg);
+	background-color: #3dc078;
+	backface-visibility: hidden;
+}
+.flip__back {
+	transform: rotateY(-180deg);
+	background-color: rgba(46, 149, 197, 0.5);
+}
+
+.flip:hover .flip__body {
+	transform: rotateY(-180deg);
+}

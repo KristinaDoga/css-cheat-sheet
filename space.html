@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+
+         <h2 id="paddingMargin">Поля и отступы</h2>
+
+         <h3 class="padding-h3">padding</h3>
+         <section class="padding animate fadeInDown">
+            <p>Внутренний отступ элемента (поле).</p>
+            <p>При указании поля в процентах, значение считается от ширины родителя.</p>
+            <p>padding сверху и снизу не действует на срочные теги</p>
+            <p>Значение может быть только положительным числом.</p>
+            <p>padding принято применять от предыдущего блока к последующему.То есть сверху вниз и слева направо.</p>
+            <p>Значения padding можно указывать как с одной стороны, так и с нескольких (top, right, bottom, left).</p>
+            <div class="padding__box box">
+               <div class="padding__display display">
+                  <div class="padding-content">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam recusandae aspernatur.
+                        Numquam
+                        temporibus deserunt accusamus, facere placeat et doloribus ullam aliquid, ex rem architecto
+                        sequi
+                        rerum voluptates fugiat quos? Numquam temporibus deserunt accusamus, facere placeat et doloribus
+                        ullam aliquid, ex rem architecto sequi</p>
+                  </div>
+               </div>
+
+               <div class="padding__example example">
+                  <label>padding-top: </label>
+                  <input type="text" class="padding-input-top" value="0px"><br>
+                  <label>padding-right: </label>
+                  <input type="text" class="padding-input-right" value="0px"><br>
+                  <label>padding-bottom: </label>
+                  <input type="text" class="padding-input-bottom" value="0px"><br>
+                  <label>padding-left: </label>
+                  <input type="text" class="padding-input-left" value="0px"><br>
+               </div>
+            </div>
+            <div class="padding__box box">
+
+               <div class="padding__example example">
+                  <p>Для первого блока</p>
+                  <label>padding: </label>
+                  <input type="text" class="padding-input-1" value="0px 0px 0px 0px"><br>
+                  <p>Для второго блока</p>
+                  <label>padding: </label>
+                  <input type="text" class="padding-input-2" value="0px 0px 0px 0px"><br>
+                  <p>Синтаксис:</p>
+                  <ul>
+                     <li>padding: со_всех_сторон;</li>
+                     <li>padding: сверху_снизу справа_слева;</li>
+                     <li>padding: сверху справа_слева снизу;</li>
+                     <li>padding: сверху справа снизу слева;</li>
+                  </ul>
+               </div>
+               <div class="padding__display display">
+                  <div class="padding-content-1">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam recusandae aspernatur.
+                        Numquam
+                        temporibus deserunt accusamus, facere placeat et doloribus ullam aliquid, ex rem architecto
+                        sequi
+                        rerum voluptates fugiat quos? Numquam temporibus deserunt accusamus, facere placeat et doloribus
+                        ullam aliquid, ex rem architecto sequi</p>
+                  </div>
+                  <div class="padding-content-2">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste minima rerum cumque modi illum
+                        omnis?
+                        Ducimus iure officiis voluptates aut?</p>
+                  </div>
+               </div>
+            </div>
+
+         </section>
+
+         <h3 class="margin-h3">margin</h3>
+         <section class="margin animate fadeInDown">
+            <p>Внешний отступ элемента</p>
+            <p>При указании поля в процентах, значение считается от ширины родителя.</p>
+            <p>Значение может быть как положительным, так и отрицательным числом.</p>
+            <p>margin сверху и снизу не действует на срочные теги</p>
+            <p>margin принято применять от предыдущего блока к последующему.То есть сверху вниз и слева направо.</p>
+            <p>Параметр margin: 0 auto поможет центрировать блок по горизонтали</p>
+            <p>Задайте обоим блокам margin: 20px, со всех сторон. Посмотрите на отступ между блоками. Он равен 40px?</p>
+            <p>Второму блоку задайте margin:-30px 0px 0px 60px. Что произошло?</p>
+
+
+            <div class="margin__box box">
+               <div class="margin__display display">
+                  <div class="margin-content">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam recusandae aspernatur.
+                        Numquam
+                        temporibus deserunt accusamus, facere placeat et doloribus ullam aliquid, ex rem architecto
+                        sequi
+                        rerum voluptates fugiat quos? Numquam temporibus deserunt accusamus, facere placeat et doloribus
+                        ullam aliquid, ex rem architecto sequi</p>
+                  </div>
+               </div>
+
+               <div class="margin__example example">
+                  <label>margin-top: </label>
+                  <input type="text" class="margin-input-top" value="0px"><br>
+                  <label>margin-right: </label>
+                  <input type="text" class="margin-input-right" value="0px"><br>
+                  <label>margin-bottom: </label>
+                  <input type="text" class="margin-input-bottom" value="0px"><br>
+                  <label>margin-left: </label>
+                  <input type="text" class="margin-input-left" value="0px"><br>
+               </div>
+            </div>
+
+
+            <div class="margin__box box">
+               <div class="margin__example example">
+                  <p>Для первого блока</p>
+                  <label>margin: </label>
+                  <input type="text" class="margin-input-1" value="0px 0px 0px 0px"><br>
+                  <p>Для второго блока</p>
+                  <label>margin: </label>
+                  <input type="text" class="margin-input-2" value="0px 0px 0px 0px"><br>
+                  <p>Синтаксис:</p>
+                  <ul>
+                     <li>margin: со_всех_сторон;</li>
+                     <li>margin: сверху_снизу справа_слева;</li>
+                     <li>margin: сверху справа_слева снизу;</li>
+                     <li>margin: сверху справа снизу слева;</li>
+                  </ul>
+               </div>
+               <div class="margin__display display">
+                  <div class="margin-content-1">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab magnam recusandae aspernatur.
+                        Numquam
+                        temporibus deserunt accusamus, facere placeat et doloribus ullam aliquid, ex rem architecto
+                        sequi
+                        rerum voluptates fugiat quos? Numquam temporibus deserunt accusamus, facere placeat et doloribus
+                        ullam</p>
+                  </div>
+                  <div class="margin-content-2">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste minima rerum cumque modi illum
+                        omnis?
+                        Ducimus iure officiis voluptates aut?</p>
+                  </div>
+               </div>
+            </div>
+
+         </section>
+
+         <h3 class="box-sizing-h3">box-sizing</h3>
+         <section class="box-sizing  animate fadeInDown">
+            <p>Применяется для изменения алгоритма расчета ширины и высоты элемента.</p>
+            <p>Значения:</p>
+            <ul>
+               <li>content-box - ширина и высота элемента не включают в себя значения отступов, полей и границ.</li>
+               <li>border-box - ширина и высота элемента включают в себя значения полей (padding) и границ (border), но
+                  не отступов (margin).</li>
+            </ul>
+            <p>Рассмотрите параметры блоков в панели разработчика. F12</p>
+            <div class="box-sizing__box box">
+               <div class="box-sizing__example example">
+                  <button class="button box-sizing-btn box-sizing__content-box">box-sizing: content-box</button>
+                  <button class="button box-sizing-btn box-sizing__border-box">box-sizing: border-box</button>
+               </div>
+
+               <div class="box-sizing__display display">
+                  <div class="sample">Образец. Размер этого квадрата 200х200</div>
+                  <div class="model-1">У этого блока padding: 10px; border: 20px</div>
+                  <div class="model-2">У этого блока padding: 10px; border: 20px</div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+   <script src="js/space.js"></script>
+</body>
+
+</html>

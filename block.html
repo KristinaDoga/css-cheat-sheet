@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+         <h2 id="blockProperties">Свойства блоков</h2>
+
+         <h3 class="width-h3 ">width</h3>
+         <section class="width animate fadeInDown">
+            <p>width устанавливает ширину блочных тегов и некоторыйх строчных (например img)</p>
+            <p>max-width устанавливает максимальную ширину блочных тегов и некоторых строчных (например img)</p>
+            <p>min-width устанавливает минимальную ширину блочных тегов и некоторых строчных (например img)</p>
+            <div class="width__box box">
+               <div class="width__example example">
+                  <label>width: </label>
+                  <input type="text" class="width-input" value="200px"><br>
+                  <label>max-width: </label>
+                  <input type="text" class="max-width-input" value="400px"><br>
+                  <label>min-width: </label>
+                  <input type="text" class="min-width-input" value="400px"><br>
+                  <p>Попробуйте сделать следующее:</p>
+                  <ul>
+                     <li>задать max-width</li>
+                     <li>задать width равную max-width</li>
+                     <li>задать width больше max-width</li>
+                     <li>задать width меньше max-width</li>
+                  </ul>
+                  <p>Попробуйте сделать следующее:</p>
+                  <ul>
+                     <li>задать min-width</li>
+                     <li> задать width равную min-width</li>
+                     <li>задать width меньше min-width</li>
+                     <li>задать width больше min-width</li>
+                  </ul>
+               </div>
+               <div class="width__display display">
+                  <div class="div-content width-content">
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="height-h3 ">height</h3>
+         <section class="height animate fadeInDown">
+            <p>height устанавливает высоту блочных тегов и некоторыйх строчных (например img)</p>
+            <p>max-height устанавливает максимальную высоту блочных тегов и некоторых строчных (например img)</p>
+            <p>min-height устанавливает минимальную высоту блочных тегов и некоторых строчных (например img)</p>
+            <div class="height__box box">
+               <div class="height__example example">
+                  <label>height: </label>
+                  <input type="text" class="height-input" value="200px"><br>
+                  <label>max-height: </label>
+                  <input type="text" class="max-height-input" value="400px"><br>
+                  <label>min-height: </label>
+                  <input type="text" class="min-height-input" value="400px"><br>
+                  <p>Попробуйте сделать следующее:</p>
+                  <ul>
+
+                     <li>задать max-height</li>
+                     <li>задать height равную max-height</li>
+                     <li>задать height больше max-height</li>
+                     <li>задать height меньше max-height</li>
+                  </ul>
+                  <p>Попробуйте сделать следующее:</p>
+                  <ul>
+
+                     <li>задать min-height</li>
+                     <li> задать height равную min-height</li>
+                     <li>задать height меньше min-height</li>
+                     <li>задать height больше min-height</li>
+                  </ul>
+               </div>
+               <div class="height__display display">
+                  <div class="div-content height-content">
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="overflow-h3">overflow</h3>
+         <section class="overflow animate fadeInDown">
+            <p>Управляет отображением содержания блочного элемента</p>
+            <p>Значения:</p>
+            <ul>
+               <li>visible - Отображается все содержание элемента, даже за пределами установленной высоты и ширины.
+               </li>
+               <li>hidden - Отображается только область внутри элемента, остальное будет скрыто.</li>
+               <li>scroll - Всегда добавляются полосы прокрутки.</li>
+               <li>auto - Полосы прокрутки добавляются только при необходимости.</li>
+            </ul>
+            <div class="overflow__box box">
+               <div class="overflow__example example">
+                  <button class="button overflow-btn overflow__visible">overflow: visible</button>
+                  <button class="button overflow-btn overflow__hidden">overflow: hidden</button>
+                  <button class="button overflow-btn overflow__scroll">overflow: scroll</button>
+                  <button class="button overflow-btn overflow__auto">overflow: auto</button>
+               </div>
+               <div class="overflow__display display">
+                  <div class="div-content overflow-content">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio cupiditate ex, dignissimos
+                     soluta
+                     harum ipsum ipsa fuga aspernatur reiciendis repellendus recusandae similique hic corporis ratione
+                     placeat illo explicabo perspiciatis quis. Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                     Doloremque voluptatibus inventore ducimus unde exercitationem aut quod error et culpa quidem
+                     voluptatum delectus nostrum sed, illo voluptates eius iusto porro? Aspernatur consequuntur illum
+                     accusantium veniam minus et, error fugit, deserunt earum eveniet nobis iste sit, culpa repellat.
+                     Rem
+                     velit quas repellat?
+                  </div>
+               </div>
+            </div>
+
+         </section>
+
+         <h3 class="displ-h3">display</h3>
+         <section class="displ animate fadeInDown">
+            <p>Многоцелевое свойство, которое определяет, как элемент должен быть показан в документе.
+               Свойство не наследуется.</p>
+            <ul>
+               <li>block - элемент отображается как блочный. Применение этого значения для строчных элементов, например
+                  тега <i>span</i>, заставляет его вести себя подобно блокам: происходит перенос строк в начале и в
+                  конце
+                  содержимого. </li>
+               <li>inline - элемент отображается как строчный. Использование блочных тегов, таких как <i>div</i> и
+                  <i>p</i>, автоматически создает перенос и показывает содержимое этих тегов с новой строки. Значение
+                  inline отменяет эту особенность, поэтому содержимое элементов начинается с того места, где окончился
+                  предыдущий элемент.
+               </li>
+               <li>inline-block - это значение генерирует блочный элемент, который обтекается другими элементами
+                  веб-страницы подобно строчному элементу. Фактически такой элемент по своему действию похож на строчный
+                  элемент <i>img</i>. При этом его внутренняя часть форматируется как блочный элемент, а сам элемент —
+                  как
+                  строчный</li>
+               <li>none - временно удаляет элемент из документа. Занимаемое им место не резервируется и веб-страница
+                  формируется так, словно элемента и не было. </li>
+            </ul>
+
+            <div class="displ__box box box-column">
+               <div class="displ__example example">
+                  <div style="margin-right: 20px; text-align: center;">
+                     <p>Для абзаца</p>
+                     <button class="button displ-btn displ__block-p">display: block</button>
+                     <button class="button displ-btn displ__inline-p">display: inline</button>
+                     <button class="button displ-btn displ__inline-block-p">display: inline-block</button>
+                     <button class="button displ-btn displ__none-p">display: none</button>
+                  </div>
+
+                  <div style=" text-align: center;">
+                     <p>Для ссылки</p>
+                     <button class="button displ-btn displ__block-a">display: block</button>
+                     <button class="button displ-btn displ__inline-a">display: inline</button>
+                     <button class="button displ-btn displ__inline-block-a">display: inline-block</button>
+                     <button class="button displ-btn displ__none-a">display: none</button>
+                  </div>
+               </div>
+               <div style="display: block;" class="displ__display display">
+                  <div class="displ__p">
+                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio cupiditate ex, dignissimos
+                     soluta
+                     harum ipsum ipsa fuga aspernatur reiciendis repellendus recusandae similique hic corporis ratione
+                     placeat</div>
+                  <a class="displ__a" href="https://linuxmint.com/">linux. Ссылка на сайт Linux Mint 21.1. Linux Mint -
+                     это
+                     операционная система для настольных компьютеров и ноутбуков. Она разработана для работы "из
+                     коробки" и
+                     полностью оснащена приложениями, необходимыми большинству людей.</a>
+               </div>
+            </div>
+         </section>
+
+         <h2 id="blockDesignProperties">Свойства оформления блоков</h2>
+
+         <h3 class="border-h3">border</h3>
+         <section class="border animate fadeInDown">
+            <div class="border__text">
+               <div class="border__info">
+                  <p>Универсальное свойство border позволяет одновременно установить толщину, стиль и цвет границы
+                     вокруг
+                     элемента.Можно стлизировать одну из стророн: top, left, right, bottom</p>
+                  <p>Синтаксис:</p>
+                  <p>border: размер стиль цвет</p>
+               </div>
+               <div class="border__list">
+                  <p>Основные стили:</p>
+                  <ul>
+                     <li>solid - сплошная граница</li>
+                     <li>dotted - граница из точек</li>
+                     <li>dashed - пунктирная граница</li>
+                     <li>double - двойнач сплошная граница</li>
+                     <li>ridge - граница с тенью. Объём</li>
+                  </ul>
+               </div>
+
+            </div>
+            <div class="border__box box">
+               <div class="border__example example">
+
+                  <label class="border-label">border: </label>
+                  <input type="text" class="border-input " value="1px solid #fee"><br>
+
+                  <label class="border-label">border-top: </label>
+                  <input type="text" class="border-input-top" value="1px solid #fee"><br>
+
+                  <label class="border-label">border-right: </label>
+                  <input type="text" class="border-input-right" value="1px solid #fee"><br>
+
+                  <label class="border-label">border-bottom: </label>
+                  <input type="text" class="border-input-bottom" value="1px solid #fee"><br>
+
+                  <label class="border-label">border-left: </label>
+                  <input type="text" class="border-input-left" value="1px solid #fee"><br>
+               </div>
+               <div class="border__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit ipsam, autem recusandae quibusdam,
+                     iure, libero ipsa accusantium eius impedit porro praesentium quam aperiam fuga voluptatem
+                     repudiandae?
+                     Maiores, pariatur soluta?</p>
+               </div>
+            </div>
+         </section>
+         <h3 class="border-radius-h3">border-radius</h3>
+         <section class="border-radius animate fadeInDown">
+
+            <div class="border-radius__box box">
+               <div class="border-radius__example example">
+                  <label>border-radius: </label>
+                  <input type="text" class="border-radius-input" value="20px"><br>
+                  <p>Устанавливает радиус скругления уголков блока.</p>
+                  <p>Border-radius: 50%; - кргуг</p>
+                  <p>Можно использовать вместе с overflow: hidden</p>
+                  <p>Для img работает, для других строчных тегов - нет</p>
+               </div>
+               <div class="border-radius__display display">
+                  <img src="media/linux.png" alt="test">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="box-shadow-h3">box-shadow</h3>
+         <section class="box-shadow animate fadeInDown">
+            <p>Добавляет тень к элементу.</p>
+            <p>Синтаксис:</p>
+            <p>box-shadow: сдвиг_по_горизонтали сдвиг_по_вертикали размытие расстояние_от_элемента</p>
+            <p>Можно добавить много теней. На тень влияет свойство border-radius.</p>
+            <div class="box-shadow__box box">
+               <div class="box-shadow__example example">
+                  <label>box-shadow: </label>
+                  <input type="text" class="box-shadow-input" value="0px 0px 10px 15px blue"><br>
+                  <label>border-radius: </label>
+                  <input type="text" class="box-shadow-input-radius" value="20px">
+               </div>
+               <div class="box-shadow__display display">
+                  <img src="media/linux.png" alt="test">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="opacity-h3">opacity</h3>
+         <section class="opacity animate fadeInDown">
+
+            <div class="opacity__box box animate fadeInDown">
+               <div class="opacity__example example">
+                  <label>opacity: </label>
+                  <input type="text" class="opacity-input" value="0.5"><br>
+                  <p>Определяет уровень прозрачности элемента. Принимает значения от 0 до 1. 0 - полностью прозрачный, 1
+                     -
+                     полностью непрозрачный</p>
+                  <p>Отличие opacity: 0; от display:none; в том что блок не убирается из верстки а только становиться
+                     прозрачным. То есть занимаемое им место остается.</p>
+                  <p>C прозрачными элементами все еще можно взаимодействовать. Например кликать по ссылкам.</p>
+               </div>
+               <div class="opacity__display display">
+                  <img src="media/linux.png" alt="test">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="visibility-h3">visibility</h3>
+         <section class="visibility animate fadeInDown">
+            <div class="visibility__box box">
+               <div class="visibility__example example">
+                  <button class="button visibility-btn visibility__visible">visibility: visible</button>
+                  <button class="button visibility-btn visibility__hidden">visibility: hidden</button>
+                  <p>Предназначен для отображения или скрытия элемента.</p>
+                  <p>Отличие visibility: hidden; от display:none; в том что блок не убирается из верстки а только
+                     скрывается, то есть занимаемое им место остается.</p>
+                  <p>Отличие visibility: hidden от opacity:0 в том что блок скрывается и взаимодействовать с ним нельзя.
+                  </p>
+               </div>
+               <div class="visibility__display display">
+                  <img src="media/linux.png" alt="test">
+               </div>
+            </div>
+         </section>
+
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+   <script src="js/block.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+         <h2 id="background">Фон</h2>
+
+         <h3 class="background-color-h3">background-color</h3>
+         <section class="background-color animate fadeInDown">
+            <p>Определяет цвет фона элемента.</p>
+            <div class="background-color__box box">
+               <div class="background-color__example example">
+                  <label>background-color: </label>
+                  <input type="text" class="background-color-input" value="#fee"><br>
+               </div>
+               <div class="background-color__display display">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="background-image-h3">background-image</h3>
+         <section class="background-image animate fadeInDown">
+            <p>Устанавливает фоновое изображение для элемента.</p>
+            <p>Синтаксис:</p>
+            <p>background-image: url('путь_к_изображению');</p>
+            <p>Изображение можеть находиться как локально, так и в интернете. <br>
+               Примеры: <br>
+               background-image: url('/media/bg.png'); <br>
+               background-image:
+               url('https://catherineasquithgallery.com/uploads/posts/2021-02/1613301565_57-p-sinii-fon-abstraktsiya-geometriya-72.jpg');
+            </p>
+
+            <p>Так же значением свойства можно указать градиент:</p>
+            <ul>
+               <li>линейный:</li>
+            </ul>
+            <p>background: linear-gradient(направление, от_какого_цвета, к_какому_цвету) </p>
+            <p>background: linear-gradient(to top, #fefcea, #f1da36)</p>
+            <ul>
+               <li>радиальный:</li>
+            </ul>
+            <p>background: radial-gradient(положение, цвет1 0%, цвет2 50%, цвет3 51%,цвет4 100%)</p>
+            <p>background: radial-gradient(ellipse at center, #134774 0%, #2989d8 50%,#25dba4 51%,#06855f 100%)</p>
+            
+            <div class="background-image__box box">
+               <div class="background-image__example example">
+                  <label>background-image: </label>
+                  <input type="text" class="background-image-input " value="url('/media/linux.png')"><br>
+                  <a href="http://htmlbook.ru/css3-na-primerakh/lineinyi-gradient">Подробнее о градиентах</a> <br>
+            <a href="https://www.colorzilla.com/gradient-editor/">Инструмент создания готового кода градиента</a>
+               </div>
+               <div class="background-image__display display">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="background-position-h3">background-position</h3>
+         <section class="background-position animate fadeInDown">
+            <p>Задает начальное положение фонового изображения, установленного с помощью свойства background-image.</p>
+            <p>Значения указываются:</p>
+            <ul>
+               <li>В процентах. Сначала по горизонтали, потом по вертикали</li>
+               <li>С помощью спец. слов: top, left, center, bottom, right</li>
+            </ul>
+            <div class="background-position__box box">
+               <div class="background-position__example example">
+                  <label>background-position:</label>
+                  <input type="text" class="background-position-input-persent" value="20% 40%"><br>
+                  <label>background-position:</label>
+                  <input type="text" class="background-position-input-word" value="bottom center"><br>
+               </div>
+               <div class="background-position__display display">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="background-repeat-h3">background-repeat</h3>
+         <section class="background-repeat animate fadeInDown">
+            <p>Определяет, как будет повторяться фоновое изображение, установленное с помощью свойства background-image.
+            </p>
+            <ul>
+               <li>no-repeat - yстанавливает одно фоновое изображение без повторений. Положение определяется свойством
+                  background-position (по умолчанию в левом верхнем углу).</li>
+               <li>repeat - фоновое изображение повторяется по горизонтали и вертикали. </li>
+               <li>repeat-x - фоновый рисунок повторяется только по горизонтали.</li>
+               <li>repeat-y - фоновый рисунок повторяется только по вертикали.</li>
+               <li>space - изображение повторяется столько раз, чтобы полностью заполнить область; если это не удаётся,
+                  между картинками добавляется пустое пространство.</li>
+               <li>round - изображение повторяется так, чтобы в области поместилось целое число рисунков; если это не
+                  удаётся сделать, то фоновые рисунки масштабируются.</li>
+               <li>inherit - наследует значение родителя.</li>
+            </ul>
+            <div class="background-repeat__box box">
+               <div class="background-repeat__example example">
+                  <button class=" button background-repeat__no-repeat">background-repeat:
+                     no-repeat</button>
+                  <button class=" background-repeat__repeat button">background-repeat: repeat</button>
+                  <button class=" background-repeat__repeat-x button">background-repeat: repeat-x</button>
+                  <button class="button background-repeat__repeat-y">background-repeat: repeat-y</button>
+                  <button class="button background-repeat__space">background-repeat: space</button>
+                  <button class="button background-repeat__round">background-repeat: round</button>
+               </div>
+
+               <div class="background-repeat__display display">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="background-attachment-h3">background-attachment</h3>
+         <section class="background-attachment animate fadeInDown">
+            <p>Устанавливает, будет ли прокручиваться фоновое изображение вместе с содержимым элемента.</p>
+            <ul>
+               <li>fixed - делает фоновое изображение элемента неподвижным.</li>
+               <li>scroll - позволяет перемещаться фону вместе с содержимым.</li>
+               <li>inherit - наследует значение родителя.</li>
+            </ul>
+            <div class="background-attachment__box box">
+               <div class="background-attachment__example example">
+                  <button class="button background-attachment__fixed">background-attachment:
+                     fixed</button>
+                  <button class="button background-attachment__scroll">background-attachment:
+                     scroll</button>
+               </div>
+               <div class="background-attachment__display display">
+               </div>
+            </div>
+         </section>
+         
+
+         <h3 class="background-size-h3">background-size</h3>
+         <section class="background-size animate fadeInDown">
+            <p>Масштабирует фоновое изображение согласно заданным размерам.</p>
+            <p>в качестве значений можно указывать любые единицы измерения из CSS (размер фоновой картинки в процентах
+               от вычисляется ширины или высоты элемента), а так же:</p>
+            <ul>
+               <li>auto - если задано одновременно для ширины и высоты (auto auto), размеры фона остаются исходными;
+                  если только для одной стороны картинки (100px auto), то размер вычисляется автоматически исходя из
+                  пропорций картинки.</li>
+               <li>cover - масштабирует изображение с сохранением пропорций так, чтобы его ширина или высота равнялась
+                  ширине или высоте блока.</li>
+               <li>contain - масштабирует изображение с сохранением пропорций таким образом, чтобы картинка целиком
+                  поместилась внутрь блока. </li>
+            </ul>
+            <p>Если установлено одно значение, оно задает ширину фона, второе значение принимается за auto. Пропорции
+               картинки при этом сохраняются. Использование двух значений через пробел задает ширину и высоту фоновой
+               картинки.</p>
+            <div class="background-size__box box box">
+               <div class="background-size__example example">
+                  <label>background-size: </label>
+                  <input type="text" class="background-size-input" value="auto"><br>
+               </div>
+               <div class="background-size__display display">
+               </div>
+            </div>
+         </section>
+
+         <h3 class="background-h3">background</h3>
+         <section class="background animate fadeInDown">
+            <p>Универсальное свойство background позволяет установить одновременно несколько характеристик фона</p>
+            <p>Синтаксис:</p>
+            <p>background: background-color background-image background-position / background-size background-repeat</p>
+            <p>Некоторые параметры могут отсутствовать. Указывать background-position, background-size,
+               background-repeat имеет смысл, если фон задан картинкой, а не цветом или градиентом. Если задаётся
+               несколько фонов, то они накладываются поверх друг друга. Примеры:</p>
+            <ul>
+               <li>background: url('/media/linux-medium.png') 0 0/auto auto no-repeat</li>
+               <li>background: #39c9e2</li>
+               <li>background: #39c9e2 url('/media/linux.png') 0 0/auto auto no-repeat</li>
+               <li>background: url('/media/linux-medium.png') 0 0/auto auto no-repeat, linear-gradient(to top, #fefcea,
+                  #f1da36)</li>
+            </ul>
+            <div class="background__box box box box-column">
+               <div class="background__example example">
+                  <label>background: </label>
+                  <input type="text" class="background-input"
+                     value="#39c9e2 url('/media/linux-medium.png') 0 0/auto auto no-repeat"><br>
+               </div>
+               <div class="background__display display">
+               </div>
+            </div>
+         </section>
+         
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+<script src="js/background.js"></script>
+</body>
+
+</html>

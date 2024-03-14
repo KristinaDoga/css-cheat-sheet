@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+         <h2 id="fontProperties">Свойства шрифта</h2>
+
+         <h3 class="font-family-h3">font-family</h3>
+         <section class="font-family animate fadeInDown">
+            <div class="font-family__text">
+               <div class="font-family__info">
+                  <p>Устанавливает семейство шрифта, которое будет использоваться для оформления текста содержимого.
+                     Список
+                     шрифтов
+                     может включать одно или несколько названий, разделенных запятой. </p>
+                  <p>Если в имени шрифта содержатся пробелы, например, Trebuchet MS, оно должно заключаться в одинарные
+                     или
+                     двойные
+                     кавычки. "Trebuchet MS"</p>
+                  <p> Браузер проверяет шрифты по очереди. Сначала ищёт первый указанный шрифт на компьютере
+                     пользователя,
+                     если
+                     его нет
+                     - второй, потом третий и так далее. Поэтому лучше начинать с указания экзотических шрифтов, а потом
+                     перейти
+                     к
+                     более стандартным.</p>
+                  <p>Последним в списке обычно описывается тип шрифта — serif, sans-serif, cursive, fantasy или
+                     monospace.
+                     Можно
+                     заметить, что внешне serif, cursive и fantasy не отличаются</p>
+
+               </div>
+               <div class="font-family__type">
+                  <p>Синтаксис:</p>
+                  <p>font-family: шрифт1 [, шрифт2, ...], семейство_шрифта;</p>
+                  <p>Стандартные семейства шрифтов (oбычно указываются последними):</p>
+                  <ul class="markers">
+                     <li>serif — шрифты с засечками. Например, Times;</li>
+                     <li>sans-serif — рубленные шрифты, без засечек. Например, Arial;</li>
+                     <li>monospace — моноширинные шрифты, ширина всех символов одинакова. Например, Courier.</li>
+                     <li>cursive — курсивные шрифты;</li>
+                     <li>fantasy — декоративные шрифты;</li>
+                     <li>inherit - наследует значение родителя.</li>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="font-family__box box">
+               <div class="font-family__example example">
+
+                  <button class="button font-family-btn ffe-1">font-family: 'Times New Roman', Times, serif;</button>
+                  <button class="button font-family-btn ffe-2">font-family: Geneva, Arial, Helvetica, sans-serif;</button>
+                  <button class="button font-family-btn ffe-3">font-family: monospace;</button>
+                  <button class="button font-family-btn ffe-4">font-family: cursive;</button>
+                  <button class="button font-family-btn ffe-5">font-family: fantasy;</button>
+               </div>
+               <div class="font-family__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eius esse
+                     voluptatem ducimus quasi tempore aliquam
+                     tempora quisquam, corporis ratione nesciunt corrupti facere alias maiores animi est, earum, labore
+                     doloremque dignissimos!</p>
+               </div>
+            </div>
+         </section>
+         <h3 class="font-size-h3">font-size</h3>
+         <section class="font-size animate fadeInDown">
+            <p>Определяет размер шрифта элемента.</p>
+
+            <div class="font-size__box box box-column">
+               <div class="font-size__example example">
+                  <label class="font-size__label">font-size: </label>
+                  <input type="text" class="font-size__input" value="20px">
+               </div>
+
+               <div class="font-size__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam necessitatibus magnam officiis?
+                     Sunt
+                     qui accusantium, similique nemo illum iste soluta ratione, eum tenetur, cum labore? Laudantium
+                     inventore quibusdam autem culpa!</p>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="font-style-h3">font-style</h3>
+         <section class="font-style animate fadeInDown">
+
+            <p>Определяет начертание шрифта — обычное, курсивное или наклонное.</p>
+            <ul>
+               <li>normal - Обычное начертание текста.</li>
+               <li>italic - Курсивное начертание.</li>
+               <li>oblique - Наклонное начертание.</li>
+            </ul>
+
+            <div class="font-style__box box">
+               <div class="font-style__example example">
+                  <button class="button font-style-btn font-style__normal">font-style: normal</button>
+                  <button class="button font-style-btn font-style__italic">font-style: italic</button>
+               </div>
+               <div class="font-style__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt eius et hic aut error porro
+                     magnam at incidunt temporibus sunt suscipit nulla voluptatibus facere repellat dolorum sapiente,
+                     architecto obcaecati!</p>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="font-weight-h3">font-weight</h3>
+         <section class="font-weight animate fadeInDown">
+
+            <p>Устанавливает насыщенность шрифта.</p>
+
+            <div class="font-weight__box box">
+               <div class="font-weight__example example">
+                  <label class="font-weight__label">font-weight: </label>
+                  <input type="text" class="font-weight__input" value="100">
+                  <ul>
+                     <li>100 - thin </li>
+                     <li>200 - extraLight</li>
+                     <li>300 - light</li>
+                     <li>400 - regular</li>
+                     <li>500 - medium</li>
+                     <li>600 - semiBold</li>
+                     <li>700 - bold</li>
+                     <li>800 - extraBold</li>
+                     <li>900 - black</li>
+                  </ul>
+               </div>
+               <div class="display">
+                  <p class="font-weight__display">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit ipsam,
+                     autem recusandae quibusdam,
+                     iure, libero ipsa accusantium eius impedit porro praesentium quam aperiam fuga voluptatem
+                     repudiandae?
+                     Maiores, pariatur soluta?</p>
+               </div>
+            </div>
+         </section>
+         <h2 id="textProperties">Свойства текста</h2>
+         <h3 class="color-h3">color</h3>
+         <section class="color animate fadeInDown">
+
+            <p>Определяет цвет текста. Для задания цветов обычно используются числа в шестнадцатеричном коде, либо с
+               помощью RGB.</p>
+
+            <div class="color__box box">
+               <div class="color__example example">
+                  <label class="color__label">color: </label>
+                  <input type="text" class="color__input ci-1" value="red"><br>
+                  <label class="color__label">color: </label>
+
+                  <input type="text" class="color__input ci-2" value="#ff0000"><br>
+
+                  <label class="color__label">color: </label>
+                  <input type="text" class="color__input ci-3" value="rgb(255, 0, 0)">
+               </div>
+               <div class="display">
+                  <p class="color__display">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit ipsam, autem
+                     recusandae quibusdam,
+                     iure, libero ipsa accusantium eius impedit porro praesentium quam aperiam fuga voluptatem
+                     repudiandae?
+                     Maiores, pariatur soluta?</p>
+               </div>
+            </div>
+         </section>
+         <h3 class="text-align-h3">text-align</h3>
+         <section class="text-align animate fadeInDown">
+
+            <p>Определяет горизонтальное выравнивание текста в пределах элемента.</p>
+            <ul>
+               <li>center - выравнивание текста по центру.</li>
+               <li>left - Выравнивание текста по левому краю. </li>
+               <li>right - Выравнивание текста по правому краю.</li>
+               <li>justify - Выравнивание по ширине (одновременное выравнивание по левому и правому краю).</li>
+            </ul>
+
+            <div class="text-align__box box">
+               <div class="text-align__example example">
+                  <button class="button text-align-btn text-align__center">text-align: center</button>
+                  <button class="button text-align-btn text-align__left">text-align: left</button>
+                  <button class="button text-align-btn text-align__right">text-align: right</button>
+                  <button class="button text-align-btn text-align__justify">text-align: justify</button>
+               </div>
+               <div class="text-align__display display">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt eius et hic aut error porro
+                     magnam at incidunt temporibus sunt suscipit nulla voluptatibus facere repellat dolorum sapiente</p>
+               </div>
+            </div>
+         </section>
+         <h3 class="text-decoration-h3">text-decoration</h3>
+         <section class="text-decoration animate fadeInDown">
+            <p>Добавляет оформление текста в виде его подчеркивания, перечеркивания, линии над текстом и мигания.
+               Одновременно можно применить более одного стиля, перечисляя значения через пробел. Это свойство
+               наследуется
+               и может принимать значения:</p>
+            <ul>
+               <li>line-through - создает перечеркнутый текст.</li>
+               <li>overline - линия проходит над текстом.</li>
+               <li>underline - устанавливает подчеркнутый текст.</li>
+               <li>none - Отменяет все эффекты, в том числе и подчеркивания у ссылок, которое задано по умолчанию.</li>
+            </ul>
+            <div class="text-decoration__box box">
+               <div class="text-decoration__example example">
+                  <button class="button text-decoration-btn text-decoration__line-through">text-decoration:
+                     line-through</button>
+                  <button class="button text-decoration-btn text-decoration__overline">text-decoration: overline</button>
+                  <button class="button text-decoration-btn text-decoration__underline">text-decoration: underline</button>
+                  <button class="button text-decoration-btn text-decoration__none">text-decoration: none</button>
+               </div>
+               <div class="text-decoration__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt eius et hic aut error porro
+                     magnam at incidunt temporibus sunt suscipit nulla voluptatibus facere repellat dolorum sapiente</p>
+               </div>
+            </div>
+         </section>
+         <h3 class="text-shadow-h3">text-shadow</h3>
+         <section class="text-shadow animate fadeInDown">
+            <p>Добавляет тень к тексту.</p>
+            <p>Синтаксис:</p>
+            <p>text-shadow: горизонтальное_смещение вертикальное_смещение размытие цвет;</p>
+            <div class="text-shadow__box box box-column">
+               <div class="text-shadow__example example">
+                  <label class="text-shadow__label">text-shadow: </label>
+                  <input type="text" class="text-shadow__input" value="5px 5px 5px #fff"><br>
+               </div>
+               <div class="text-shadow__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit ipsam, autem recusandae quibusdam,
+                     iure, libero ipsa accusantium eius impedit porro praesentium quam aperiam fuga voluptatem
+                     repudiandae?
+                     Maiores, pariatur soluta?</p>
+               </div>
+            </div>
+         </section>
+         <h3 class="text-transform-h3">text-transform</h3>
+         <section class="text-transform animate fadeInDown">
+            <p>Управляет преобразованием текста в заглавные или прописные символы.</p>
+            <ul>
+               <li>capitalize - первый символ каждого слова в предложении будет заглавным. Остальные символы свой вид не
+                  меняют.</li>
+               <li>lowercase - все символы текста становятся строчными (нижний регистр).</li>
+               <li>uppercase - все символы текста становятся прописными (верхний регистр).</li>
+               <li>none - не меняет регистр символов.</li>
+            </ul>
+            <div class="text-transform__box box">
+               <div class="text-transform__example example">
+                  <button class="button text-transform-btn text-transform__capitalize">text-transform: capitalize</button>
+                  <button class="button text-transform-btn text-transform__lowercase">text-transform: lowercase</button>
+                  <button class="button text-transform-btn text-transform__uppercase">text-transform: uppercase</button>
+                  <button class="button text-transform-btn text-transform__none">text-transform: none</button>
+               </div>
+               <div class="text-transform__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum nesciunt eius et hic aut error porro
+                     magnam at incidunt temporibus sunt suscipit nulla voluptatibus facere repellat dolorum sapiente</p>
+               </div>
+            </div>
+         </section>
+         <h3 class="other-h3">Прочее</h3>
+         <section class="other animate fadeInDown">
+            <p> <b>text-indent</b> устанавливает величину отступа первой строки блока текста.</p>
+            <p><b>letter-spacing</b> определяет интервал между символами (буквами). Используется когда нужно разрядить
+               текст.</p>
+            <p><b>line-height</b> устанавливает междустрочный интервал текста.</p>
+            <p><b>word-spacing</b> устанавливает интервал между словами.</p>
+            <p>Значение указывается в пикселях или других единицах измерения. Параметр normal установит значение по
+               умолчанию (для text-indent: 0px)</p>
+            <div class="other__box box">
+               <div class="other__example example">
+                  <label class="text-indent-label">text-indent: </label>
+                  <input type="text" class="text-indent-input" value="5px"><br>
+
+                  <label class="letter-spacing-label">letter-spacing: </label>
+                  <input type="text" class="letter-spacing-input" value="5px"><br>
+
+                  <label class="line-height-label">line-height: </label>
+                  <input type="text" class="line-height-input" value="5px"><br>
+
+                  <label class="word-spacing-label">word-spacing: </label>
+                  <input type="text" class="word-spacing-input" value="5px"><br>
+
+               </div>
+               <div class="other__display display">
+                  <p>Lorem, ipsum dolor.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sit ipsam, autem recusandae quibusdam,
+                     iure, libero ipsa accusantium eius impedit porro praesentium quam aperiam fuga voluptatem
+                     repudiandae?
+                     Maiores, pariatur soluta?</p>
+               </div>
+            </div>
+         </section>
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+   <script src="js/fonts.js"></script>
+</body>
+
+</html>

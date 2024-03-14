@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/transform.css">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+   <style>
+      .display {
+         overflow: visible;
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+         <!-- Контент -->
+         <div class="">
+               <h2>2D Transform</h2>
+            <h3 class="translate-h3">translate (x, y)</h3>
+            <section class="translate animate fadeInDown">
+               <p><strong>translate</strong> - сдвигает элемент на новое место, перемещая относительно изначального
+                  положения объекта вправо и вниз, используя координаты X и Y.</p>
+               <div class="box">
+                  <div class="example">
+                     <label>transform: </label>
+                     <input type="text" class="transformX" value="translateX(0px)"><br>
+                     <label>transform: </label>
+                     <input type="text" class="transformY" value="translateY(0px)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content content__translate">translate</div>
+                  </div>
+               </div>
+            </section>
+
+            <h3 class="scale-h3">scale (x, y)</h3>
+            <section class="scale animate fadeInDown">
+               <p><strong>scale</strong> - масштабирует элементы, делая их больше или меньше. Значение по умолчанию -
+                  единица (реальный размер объекта). Первое значение масштабирует элемент по
+                  ширине, второе — по высоте. Отрицательные значения отображают элемент зеркально.</p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform: </label>
+                     <input type="text" class="scale-input" value="scale(1, 1)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content content__scale">scale</div>
+                  </div>
+               </div>
+
+            </section>
+
+            <h3 class="rotate-h3">rotate (угол+deg)</h3>
+            <section class="rotate animate fadeInDown">
+               <p><strong>rotate</strong> - поворачивает элементы на заданное количество градусов. Отрицательные
+                  значения поворачивают элемент против часовой стрелки, положительные — по часовой стрелке.
+                  Записываются значения в deg (в градусах)</p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform: </label>
+                     <input type="text" class="rotate-input" value="rotate(0deg)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content content__rotate">rotate</div>
+                  </div>
+               </div>
+
+            </section>
+
+            <h3 class="skew-h3">skew (x-угол+deg, y-угол+deg)</h3>
+            <section class="skew animate fadeInDown">
+               <p><strong>skew</strong> - деформирует (искажает) стороны объекта относительно координатных осей. Если
+                  указано одно значение, второе будет определено браузером автоматически. Записываются значения как
+                  градус поворота и deg</p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform: </label>
+                     <input type="text" class="skew-input" value="skew(0deg)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content content__skew">skew</div>
+                  </div>
+               </div>
+            </section>
+
+            <h3 class="matrix-h3">matrix (a, c, b, d, x, y)</h3>
+            <section class="matrix animate fadeInDown">
+               <p><strong>matrix(a, c, b, d, x, y)</strong> - позволяет объединить несколько функций 2D-трансформаций
+                  в одной. В качестве трансформации допустимы поворот, масштабирование, наклон (деформация) и
+                  изменение положения. Свойства указываются без единиц измерения.</p>
+               <p>Значения:</p>
+               <ul>
+                  <li><strong>a</strong> изменяет масштаб по горизонтали. Значение от 0 до 1 уменьшает элемент,
+                     больше 1 — увеличивает.</li>
+                  <li><strong>c</strong> деформирует (сдвигает) стороны элемента по оси Y, положительное значение —
+                     вверх, отрицательное — вниз.</li>
+                  <li><strong>b</strong> деформирует (сдвигает) стороны элемента по оси X, положительное значение —
+                     влево, отрицательное — вправо.</li>
+                  <li><strong>d</strong> изменяет масштаб по вертикали. Значение меньше 1 уменьшает элемент, больше 1
+                     — увеличивает.</li>
+                  <li><strong>x</strong> смещает элемент по оси X, положительное — вправо, отрицательное — влево.
+                  </li>
+                  <li><strong>y</strong> смещает элемент по оси Y, положительное значение — вниз, отрицательное —
+                     вверх.</li>
+               </ul>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform: </label>
+                     <input type="text" class="matrix-input" value="matrix(1, 0, 0, 1, 0, 0)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content content__matrix">matrix</div>
+                  </div>
+               </div>
+            </section>
+
+            <h3 class="multi-h3">Множественные 2D трансформации</h3>
+            <section class="multi animate fadeInDown">
+               <p>Можно записать несколько значений (translate,scale,rotate) в одно свойство transform.</p>
+               <div class="box box-column" width="400" height="400">
+                  <div class="example" style="display: flex; justify-content: center;">
+                     <label>transform: </label>
+                     <input style="min-width: 500px;" type="text" class="multi-input"
+                        value="translate(-10px, 10px) scale(0.7) rotate(45deg)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content content__multi">translate <br> scale <br> rotate</div>
+                  </div>
+               </div>
+            </section>
+
+            <h3 class="transform-origin-h3">transform-origin</h3>
+            <section class="transform-origin animate fadeInDown">
+               <p><strong>transform-origin</strong> - позволяет сместить центр трансформации, относительно которого
+                  происходит изменение положения/размера/формы элемента. Значения записываются как top left right и
+                  bottom. По обозначению углов и центра</p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform-origin: </label>
+                     <input type="text" class="transform-origin-input" value="center"><br>
+                     <label>transform: </label>
+                     <input type="text" class="transf-input" value="rotate(90deg)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content content__transform-origin">transform origin</div>
+                  </div>
+               </div>
+            </section>
+
+            <h3 class="perspective-origin-h3">perspective, perspective-origin</h3>
+            <section class="perspective-origin animate fadeInDown">
+               <p><strong>perspective, perspective-origin</strong> - установка глубины и смена точки начала
+                  координат
+               </p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>perspective-origin: </label>
+                     <input type="text" class="perspective-origin-input" value="center"><br>
+                     <label>perspective: </label>
+                     <input type="text" class="perspect-input" value="400px"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content__wrapper3d wrapper3d-perspective">
+                        <div class="content content__perspective">perspective perspective-origin</div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <h2>3D Transform</h2>
+            <h3 class="translate3d-h3">translate3d (x, y, z)</h3>
+            <section class="translate3d animate fadeInDown">
+               <p><strong>translate3D</strong> - по аналогии с 2D задает перемещение
+                  элемента, но, в 3D-пространстве. Помимо оси X и Y добавляется ось Z.</p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform:</label>
+                     <input type="text" class="translate3d-input" value="translate3D(20px, 20px, 50px)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content__wrapper3d wrapper3d-translate3d">
+                        <div class="content content__translate3d">translate3D</div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <h3 class="scale3d-h3">scale3d (x, y, z)</h3>
+            <section class="scale3d animate fadeInDown">
+               <p><strong>scale3D</strong> - задает трехмерное масштабирование по одной из осей X, Y, Z. По существу
+                  дублирует scale из 2D.</p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform:</label>
+                     <input type="text" class="scale3d-input" value="scale3d(1, 1, 1)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content__wrapper3d wrapper3d-scale3d">
+                        <div class="content content__scale3d">scale3D</div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+
+
+            <h3 class="rotate3d-h3">rotate3d (x, y, z, deg)</h3>
+            <section class="rotate3d animate fadeInDown">
+               <p><strong>rotate3d</strong> - вращает элемент относительно трех осей. Элемент поворачивается под
+                  углом, задаваемым последним параметром относительно вектора направления X, Y, Z</p>
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <label>transform:</label>
+                     <input type="text" class="rotate3d-input" value="rotate3d(1, 1, 1, 0deg)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content__wrapper3d wrapper3d-rotate3d">
+                        <div class="content content__rotate3d">rotate3d</div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+
+            <h3 class="matrix3d-h3">matrix3d (n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)</h3>
+            <section class="matrix3d animate fadeInDown">
+               <p><strong>matrix3d</strong> - задает трехмерное преобразование как однородную матрицу размером 4×4 с
+                  шестнадцатью значениями в столбцах. <br><a
+                     href="http://ds-overdesign.com/transform/matrix3d.html">Генератор 3D матриц</a> </p>
+               <div class="content__wrapper3d">
+                  <div class="content__matrix3d content">matrix3d</div>
+               </div>
+            </section>
+            <h3 class="multi3d-h3">Множественные 3D трансформации</h3>
+            <section class="multi3d animate fadeInDown">
+               <p>Запись нескольких 3D значений в одно свойство transform.</p>
+               <div class="box box-column" width="400" height="400">
+                  <div class="example" style="display: flex; justify-content: center;">
+                     <label>transform:</label>
+                     <input style="min-width: 500px;" type="text" class="multi3d-input"
+                        value="translate3d(20px, 20px, 20px) rotate3d(1, 1, 1, 10deg)"><br>
+                  </div>
+                  <div class="display">
+                     <div class="content__wrapper3d">
+                        <div class="content content__multi3d">translate3d <br> rotate3d</div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+            <h3 class="style-h3">transform-style</h3>
+            <section class="style animate fadeInDown">
+               <p><strong>transform-style</strong> - задает стиль трансформации (указывать для родителя анимируемого
+                  блока)</p>
+
+               <div class="box" width="400" height="400">
+                  <div class="example">
+                     <button class="button flat">transform-style: flat;</button>
+                     <button class="button preserve">transform-style: preserve-3d;</button>
+                  </div>
+                  <div class="display">
+                     <div class="content__transform-style-wrapper">
+                        <div class="content content__transform-style">translate3d <br> rotate3d</div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+
+
+            <h3 class="visibility-h3">Backface-visibility</h3>
+            <section class="visibility animate fadeInDown">
+               <p>Свойство определяет, будет ли видна пользователю обратная сторона элемента.</p>
+               <div class="box">
+                  <div class="example">
+                     <button class="button visible">backface-visibility: visible;</button>
+                     <button class="button hidden">backface-visibility: hidden;</button>
+                     <button class="codeLink">Код</button>
+                  </div>
+                  <div class="display">
+                     <div class="flip">
+                        <div class="flip__body">
+                           <div class="flip__front">FONT</div>
+                           <div class="flip__back">BACK</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               
+                  <pre>
+                     <code class="codeList">
+                        .flip__body {
+                           position: relative;
+                           width: 150px;
+                           height: 150px;
+                           transition: all 0.8s ease 0s;
+                           transform-style: preserve-3d;
+                        }
+                        .flip__front, .flip__back {
+                           position: absolute;
+                           width: 100%;
+                           height: 100%;
+                           top: 0;
+                           left: 0;
+                           display: flex;
+                           justify-content: center;
+                           align-items: center;
+                        }
+                        .flip__front {
+                           z-index: 2;
+                           transform: rotateY(0deg);
+                           background-color: #3dc078;
+                           backface-visibility: hidden;
+                        }
+                        .flip__back {
+                           transform: rotateY(-180deg);
+                           background-color: rgba(46, 149, 197, 0.5);
+                        }
+                        
+                        .flip:hover .flip__body {
+                           transform: rotateY(-180deg);
+                        }
+                     </code>
+                  </pre>
+            </section>
+
+         </div>
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+
+   <script src="js/transform.js">
+   </script>
+</body>
+
+</html>

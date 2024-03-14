@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+         <h2>Позиционирование</h2>
+         <p>Основное свойство позиционирования — position. Устанавливает положение элемента относительно других
+            элементов или относительно окна браузера.</p>
+         <h3 class="position-h3">position</h3>
+         <section class="position animate fadeInDown">
+            <p>Значения:</p>
+            <div class="half-width">
+
+               <div>
+                  <ul>
+                     <li>static — значение по умолчанию. Так отображаются все элементы, если указано
+                        position: static или свойство position не указано вообще.</li>
+                     <li>relative — позиционирование относительно изначального положения в коде.</li>
+                     <li>fixed — позиционирование относительно окна браузера. Обязательно использование top, left, right
+                        или bottom</li>
+                     <li>absolute — элемент удаляется из кода, место под него не резервируется. Сам элемент
+                        позиционируется относительно своего ближайшего позиционированного родителя, если такового нет,
+                        то относительно окна браузера. <br> Обязательнo использовать вместе с top, left, right или
+                        bottom + position: relative у родительского элемента.</li>
+
+
+                  </ul>
+               </div>
+               <ul>
+                  <li>sticky — элемент позиционируется как static до опредёленной позиции, а затем смещается
+                     относительно его ближайшего родителя</li>
+                  <br>
+                  <li>Дополнительные свойства top, left, right, bottom нужны, чтобы указать положение элемента.</li>
+                  <li>Дополнительное свойство z-index oтвечает за расположение элементов по оси z. То есть за перекрытие
+                     элементами друг друга, если они находятся на одном и том же месте страницы. <br> Принимает целые
+                     значения от
+                     нуля, то есть 0,1,2... <br> По умолчанию у всех элементов z-index: 0. <br> z-index игнорируется для
+                     position: static</li>
+
+               </ul>
+            </div>
+            <div class="position__box box box-column">
+               <div class="position__example example">
+                  <div>
+                     <p>Для блока 1</p>
+                     <div>
+                        <label>position: </label>
+                        <input type="text" class="static-input-1" value="static"><br>
+                     </div>
+                     <div>
+                        <label>top: </label>
+                        <input type="text" class="static-it-1" value="0"><br>
+                        <label>left: </label>
+                        <input type="text" class="relative-il-1" value="0"><br>
+                        <label>right: </label>
+                        <input type="text" class="absolute-ir-1" value="0"><br>
+                        <label>bottom: </label>
+                        <input type="text" class="fixed-ib-1" value="0"><br>
+                        <label>z-index: </label>
+                        <input type="text" class="fixed-iz-1" value="0"><br>
+                     </div>
+                  </div>
+
+
+                  <div>
+                     <p>Для блока 2</p>
+                     <label>position: </label>
+                     <input type="text" class="static-input-2" value="static"><br>
+                     <div>
+                        <label>top: </label>
+                        <input type="text" class="static-it-2" value="0"><br>
+                        <label>left: </label>
+                        <input type="text" class="relative-il-2" value="0"><br>
+                        <label>right: </label>
+                        <input type="text" class="absolute-ir-2" value="0"><br>
+                        <label>bottom: </label>
+                        <input type="text" class="fixed-ib-2" value="0"><br>
+                        <label>z-index: </label>
+                        <input type="text" class="fixed-iz-2" value="0"><br>
+                     </div>
+                  </div>
+
+
+                  <div>
+                     <p>Для блока 3</p>
+                     <label>position: </label>
+                     <input type="text" class="static-input-3" value="static"><br>
+                     <div>
+                        <label>top: </label>
+                        <input type="text" class="static-it-3" value="0"><br>
+                        <label>left: </label>
+                        <input type="text" class="relative-il-3" value="0"><br>
+                        <label>right: </label>
+                        <input type="text" class="absolute-ir-3" value="0"><br>
+                        <label>bottom: </label>
+                        <input type="text" class="fixed-ib-3" value="0"><br>
+                        <label>z-index: </label>
+                        <input type="text" class="fixed-iz-3" value="0"><br>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <div class="position__display display">
+            <div class="position__block-1">Блок 1</div>
+            <div class="position__block-2">Блок 2</div>
+            <div class="position__block-3">Блок 3</div>
+            <div width="500px" style="padding: 200px;"></div>
+         </div>
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+   <script src="js/position.js"></script>
+</body>
+
+</html>

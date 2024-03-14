@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+         <h2>FLEXBOX</h2>
+         <div class="display FLEXBOX__display">
+            <div class="FLEXBOX__container">
+               <div class="FLEXBOX__block-1">
+                  <p>Блок 1</p>
+               </div>
+               <div class="FLEXBOX__block-2">
+                  <p>Блок 2</p>
+               </div>
+               <div class="FLEXBOX__block-3">
+                  <p>Блок 3</p>
+               </div>
+            </div>
+            <div class="FLEXBOX__info">
+               <ul>
+                  <li>Контейнер</li>
+                  <li>Элемент</li>
+                  <li>Содержимое</li>
+               </ul>
+            </div>
+         </div>
+         <h2>Свойства контейнера</h2>
+         <p>Свойства, которые применяются к контейнеру, действуют на все элементы в нём.</p>
+
+         <h3 class="display-flex-h3">display</h3>
+         <section class="display-flex animate fadeInDown">
+            <p>Значения:</p>
+            <ul>
+               <li>flex - элементы выстраиваются в ряд. Контейнер остаётся блочным. При изменении ширины экрана флекс
+                  элементы не переносятся на другую строку.</li>
+               <li>inline-flex - контейнер похож на display: inline-block, контейнер тоже занимает столько места,
+                  сколько в нём контента. Если задать родителю text-align: center, то весь флекс контейнер центрируется
+                  по горизонтали.
+               </li>
+            </ul>
+            <div class="example">
+               <button class="button  FLEXBOX__flex">display: flex</button>
+               <button class="button  FLEXBOX__inline-flex">display: inline-flex</button>
+               <button class="button  FLEXBOX__block">display: block</button>
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX__container-display">
+                  <div class="FLEXBOX__block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2">
+                     <p>Блок 2</p>
+                  </div>
+                  <div class="FLEXBOX__block-3">
+                     <p>Блок 3</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="justify-content-h3">justify-content</h3>
+         <section class="justify-content animate fadeInDown">
+            <p>Устанавливает положение флекс элементов по основной линии (по той, по которой эти элементы расположены).
+            </p>
+            <p>Значения:</p>
+            <ul>
+               <li>flex-start — группа элементов начинается с левой границы контейнера. (значение по умолчанию)</li>
+               <li>flex-end — группа элементов заканчивается на правой границе</li>
+               <li>center - группа элементов располагается по центру</li>
+               <li>space-between (расстояние между) — первый элемент расположен в начале, последний — в конце. Все
+                  элементы между первым и последним разделяются пустым пространством. Не путайте с отступами. При
+                  изменении размеров экрана и уменьшении места, этого пространства может и не быть.</li>
+               <li>space-around (расстояние вокруг) — у каждого элемента расстояние слева и справа получается
+                  одинаковым. Расстояния не суммируются. Не путайте с отступами. При изменении размеров экрана и
+                  уменьшении места, этого пространства может и не быть.</li>
+            </ul>
+            <div class="example">
+               <button class="button flex-start">justify-content: flex-start</button>
+               <button class="button flex-end">justify-content: flex-end</button>
+               <button class="button center">justify-content: center</button>
+               <button class="button space-between">justify-content: space-between</button>
+               <button class="button space-around">justify-content: space-around</button>
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX-justify-content">
+                  <div class="FLEXBOX__block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2">
+                     <p>Блок 2</p>
+                  </div>
+                  <div class="FLEXBOX__block-3">
+                     <p>Блок 3</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="align-items-h3">align-items</h3>
+         <section class="align-items animate fadeInDown">
+            <p>Положение флекс элементов по неосновной линии.</p>
+            <p>Значения:</p>
+            <ul>
+               <li>stretch — по высоте все флекс элементы подстраиваются под самый высокий. (значение по умолчанию)</li>
+               <li>flex-start — группа элементов начинается сверху</li>
+               <li>flex-end — группа элементов заканчивается снизу</li>
+               <li>center — группа элементов располагается по центру</li>
+            </ul>
+            <div class="example">
+               <button class="button stretch">align-items: stretch</button>
+               <button class="button flex-start-ai">align-items: flex-start</button>
+               <button class="button flex-end-ai">align-items: flex-end</button>
+               <button class="button center-ai">align-items: center</button>
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX-align-items">
+                  <div class="FLEXBOX__block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2">
+                     <p>Блок 2</p>
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, maiores? Lorem ipsum dolor sit
+                        amet.
+                     </p>
+                  </div>
+                  <div class="FLEXBOX__block-3">
+                     <p>Блок 3</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="flex-wrap-h3">flex-wrap</h3>
+         <section class="flex-wrap animate fadeInDown">
+            <p>Перенос элементов на новую строчку при нехватке места.</p>
+            <p>Значения:</p>
+            <ul>
+               <li>nowrap (по умолчанию) — не позволяет флекс элементам переноситься на новую строку при нехватке места
+               </li>
+               <li>wrap — позволяет флекс элементам переноситься на новую строку при нехватке места</li>
+               <li>wrap-reverse — при нехватке места позволяет флекс элементам переноситься на новую строку, но в
+                  обратном порядке</li>
+            </ul>
+            <div class="example">
+               <button class="button nowrap">flex-wrap: nowrap</button>
+               <button class="button wrap">flex-wrap: wrap</button>
+               <button class="button wrap-reverse">flex-wrap: wrap-reverse</button>
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX-flex-wrap">
+                  <div class="FLEXBOX__block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2">
+                     <p>Блок 2</p>
+                  </div>
+                  <div class="FLEXBOX__block-3">
+                     <p>Блок 3</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h2>Свойства элементов</h2>
+         <p>Свойства применяются к одному конкретному элементу.</p>
+         <h3 class="align-self-h3">align-self</h3>
+         <section class="align-self animate fadeInDown">
+            <p>Позволяет перезаписать значение align-items для конкретного элемента.</p>
+            <p>Значения:</p>
+            <ul>
+               <li>stretch — по высоте все флекс элементы подстраиваются под самый высокий. (значение по умолчанию)</li>
+               <li>flex-start — группа элементов начинается сверху</li>
+               <li>flex-end — группа элементов заканчивается снизу</li>
+               <li>center — группа элементов располагается по центру</li>
+            </ul>
+            <div class="example position__example">
+               <div>
+                  <p>Для блока 1</p>
+                  <button class="button stretch-as-1">align-self: stretch</button>
+                  <button class="button flex-start-as-1">align-self: flex-start</button>
+                  <button class="button flex-end-as-1">align-self: flex-end</button>
+                  <button class="button center-as-1">align-self: center</button>
+               </div>
+
+               <div>
+                  <p>Для блока 2</p>
+                  <button class="button stretch-as-2">align-self: stretch</button>
+                  <button class="button flex-start-as-2">align-self: flex-start</button>
+                  <button class="button flex-end-as-2">align-self: flex-end</button>
+                  <button class="button center-as-2">align-self: center</button>
+               </div>
+
+               <div>
+                  <p>Для блока 3</p>
+                  <button class="button stretch-as-3">align-self: stretch</button>
+                  <button class="button flex-start-as-3">align-self: flex-start</button>
+                  <button class="button flex-end-as-3">align-self: flex-end</button>
+                  <button class="button center-as-3">align-self: center</button>
+               </div>
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX-align-self">
+                  <div class="FLEXBOX__block-1 align-self-block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2 align-self-block-2">
+                     <p>Блок 2</p>
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi, maiores? Lorem ipsum dolor sit
+                        amet.
+                     </p>
+                  </div>
+                  <div class="FLEXBOX__block-3 align-self-block-3">
+                     <p>Блок 3</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="order-h3">order</h3>
+         <section class="order animate fadeInDown">
+            <p>Порядок вывода флекс элементов. В качестве значений принимается желаемый порядковый номер для конкретного
+               элемента.</p>
+            <div class="example position__example">
+               <div>
+                  <p>Для блока 1</p>
+                  <label>order: </label>
+                  <input type="text" class="order-input-1" value="3"><br>
+               </div>
+               <div>
+                  <p>Для блока 2</p>
+                  <label>order: </label>
+                  <input type="text" class="order-input-2" value="1"><br>
+               </div>
+               <div>
+                  <p>Для блока 3</p>
+                  <label>order: </label>
+                  <input type="text" class="order-input-3" value="2"><br>
+               </div>
+
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX-order">
+                  <div class="FLEXBOX__block-1 order-block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2 order-block-2">
+                     <p>Блок 2</p>
+                  </div>
+                  <div class="FLEXBOX__block-3 order-block-3">
+                     <p>Блок 3</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="flex-basis-h3">flex</h3>
+         <section class="flex-basis animate fadeInDown">
+            <ul> 
+               <li>flex-basis - базовый размер элемента.auto — значение по умолчанию, <br> где размер элемента равен размеру
+                  его контента. Значение можно задать в пикселях или в процентах.</li>
+               <li>flex-grow - возможность увеличиваться в размере относительно flex-basis <br>
+                  Значения: <br>
+                  0 — запрещено становиться больше flex-basis <br>
+                  1 — разрешено становиться больше flex-basis</li>
+
+               <li>
+                  flex-shrink - возможность уменьшаться в размере относительно flex-basis <br>
+                  Значения:<br>
+                  0 — запрещено становиться меньше flex-basis <br>
+                  1 — разрешено становиться меньше flex-basis
+               </li>
+            </ul>
+            <p>Сокращенная запись: </p>
+            <p>flex: flex-grow flex-shrink flex-basis <br>
+               (flex: 1 1 auto приенить к  main + flex-direction: column у body прижмёт футер к низу)</p>
+            <div class="example position__example">
+               <div>
+                  <p>Для блока 1</p>
+                  <label>flex-basis: </label>
+                  <input type="text" class="flex-basis-input-1" value="25%"><br>
+                  <label>flex-grow: </label>
+                  <input type="text" class="flex-grow-input-1" value="1"><br>
+                  <label>flex-shrink: </label>
+                  <input type="text" class="flex-shrink-input-1" value="1"><br>
+               </div>
+               <div>
+                  <p>Для блока 2</p>
+                  <label>flex-basis: </label>
+                  <input type="text" class="flex-basis-input-2" value="50%"><br>
+                  <label>flex-grow: </label>
+                  <input type="text" class="flex-grow-input-2" value="1"><br>
+                  <label>flex-shrink: </label>
+                  <input type="text" class="flex-shrink-input-2" value="1"><br>
+               </div>
+               <div>
+                  <p>Для блока 3</p>
+                  <label>flex-basis: </label>
+                  <input type="text" class="flex-basis-input-3" value="25%"><br>
+                  <label>flex-grow: </label>
+                  <input type="text" class="flex-grow-input-3" value="1"><br>
+                  <label>flex-shrink: </label>
+                  <input type="text" class="flex-shrink-input-3" value="1"><br>
+               </div>
+
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX-flex-basis">
+                  <div class="FLEXBOX__block-1 flex-basis-block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2 flex-basis-block-2">
+                     <p>Блок 2</p>
+                  </div>
+                  <div class="FLEXBOX__block-3 flex-basis-block-3">
+                     <p>Блок 3</p>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="flex-direction-h3">flex-direction</h3>
+         <section class="flex-direction animate fadeInDown">
+            <p>Задаёт основную ось внутри флекс контейнера</p>
+            <p>Значения:</p>
+            <ul>
+               <li>row (по умолчанию) - выстраивает флекс элементы в ряд</li>
+               <li>row-reverse - выстраивает флекс элементы в ряд, но стартуют они с конца и в обратном порядке</li>
+               <li>column - выстраивает флекс элементы в колонку. Теперь основной линией (по той, по которой эти элементы расположены) стала вертикаль, а значит justufy-content располагает элементы по вертикали, а align-items - по горизонтали. </li>
+               <li>column-reverse - выстраивает флекс элементы в колонку, но стартуют они с конца и в обратном порядке</li>
+            </ul>
+
+            <div class="example position__example">
+               <div>
+                  <button class="button row-fd">flex-direction: row</button>
+               <button class="button row-reverse-fd">flex-direction: row-reverse</button>
+               <button class="button column-fd">flex-direction: column</button>
+               <button class="button column-reverse-fd">flex-direction: column-reverse</button>
+               </div>
+
+
+               <div>
+                  <button class="button flex-start-fd">justify-content: flex-start</button>
+               <button class="button flex-end-fd">justify-content: flex-end</button>
+               <button class="button center-fd">justify-content: center</button>
+               <button class="button space-between-fd">justify-content: space-between</button>
+               <button class="button space-around-fd">justify-content: space-around</button>
+               </div>
+
+               <div>
+                  <button class="button stretch-fd">align-items: stretch</button>
+               <button class="button flex-start-ai-fd">align-items: flex-start</button>
+               <button class="button flex-end-ai-fd">align-items: flex-end</button>
+               <button class="button center-ai-fd">align-items: center</button>
+               </div>
+
+
+            </div>
+            <div class="display FLEXBOX__display">
+               <div class="FLEXBOX__container  FLEXBOX-flex-direction">
+                  <div class="FLEXBOX__block-1">
+                     <p>Блок 1</p>
+                  </div>
+                  <div class="FLEXBOX__block-2">
+                     <p>Блок 2</p><br><p>Lorem ipsum dolor <br> sit amet consectetur?</p>
+                  </div>
+                  <div class="FLEXBOX__block-3">
+                     <p>Блок 3</p>
+                  </div>
+                 
+               </div>
+               <br>
+               <a href="https://flexboxfroggy.com/#ru">Игра FLEXBOX</a>
+            </div>
+         </section>
+
+
+
+
+
+
+
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+   <script src="js/flex.js"></script>
+</body>
+
+</html>

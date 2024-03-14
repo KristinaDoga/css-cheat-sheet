@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="css/style.css">
+   <title>Шпаргалка по CSS</title>
+
+</head>
+
+<body>
+   <header>
+      <nav>
+         <ul>
+            <li>
+               <a href="fonts.html">Текст и шрифт</a>
+            </li>
+            <li>
+               <a href="block.html">Блоки</a>
+            </li>
+            <li>
+               <a href="space.html">Отступы</a>
+            </li>
+            <li>
+               <a href="background.html">Фон</a>
+            </li>
+            <li>
+               <a href="position.html">Позиционирование</a>
+            </li>
+            <li>
+               <a href="flex.html">Flexbox</a>
+            </li>
+            <li>
+               <a href="transition.html">Переходы и Анимация</a>
+            </li>
+            <li>
+               <a href="transform.html">Преобразования</a>
+            </li>
+            <li>
+               <a href="links.html">Ссылки</a>
+            </li>
+         </ul>
+      </nav>
+   </header>
+   <main>
+      <div class="wrapper">
+         <h2>Переходы</h2>
+         <p style="text-align: center;">Изменение стиля элемента в момент изменении его состояния</p>
+         <h3 class="transition-duration-h3">transition-duration</h3>
+         <section class="transition-duration animate fadeInDown">
+            <p>Определяет промежуток времени, в течение которого должен осуществляться переход. В значении указывается
+               время за которое одно значение свойства переходит в другое (s, ms). Свойство не наследуется.
+            </p>
+            <div class="box">
+               <div class="example">
+                  <label>transition-duration: </label>
+                  <input type="text" class="transition-duration-input" value="1s"><br>
+               </div>
+               <div class="display animate-object">
+                  <button class="transition-duration-btn animate-object__btn-1 animate-object__btn">Наведи на
+                     меня</button>
+               </div>
+            </div>
+         </section>
+         <h3 class="transition-property-h3">transition-property</h3>
+         <section class="transition-property animate fadeInDown">
+            <p>Содержит название CSS-свойств, к которым будет применен эффект перехода. Значение свойства может
+               содержать как одно свойство, так и список свойств через запятую. Свойство не наследуется. <br>
+               При значении <b>all</b> будут анимироваться <a href="animationPropertyList.html">все свойства</a></p>
+            <div class="box">
+               <div class="example">
+                  <button class="button all-btn">transition-property: all;</button>
+                  <button class="button color-btn">transition-property: color</button>
+                  <button class="button bsbc-btn">transition-property: box-shadow, background-color</button>
+               </div>
+               <div class="display animate-object">
+                  <button style="transition-duration: 1s"
+                     class="transition-property-btn animate-object__btn-1 animate-object__btn">Наведи на меня</button>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="transition-delay-h3">transition-delay</h3>
+         <section class="transition-delay animate fadeInDown">
+            <p>Задержка выполнения перехода. Позволяет сделать так, чтобы изменение свойства происходило не моментально,
+               а с некоторой задержкой. Время задержки перехода указывается в секундах или миллисекундах. Свойство не
+               наследуется.</p>
+            <div class="box">
+               <div class="example">
+                  <label>transition-delay: </label>
+                  <input type="text" class="transition-delay-input" value="0.3s"><br>
+               </div>
+               <div class="display animate-object">
+                  <button class="transition-delay-btn animate-object__btn-1 animate-object__btn">Наведи на меня</button>
+               </div>
+            </div>
+         </section>
+         <h3 class="transition-timing-function-h3">transition-timing-function</h3>
+         <section class="transition-timing-function animate fadeInDown">
+            <p>Задаёт стиль нашего перехода, то есть сценарий, по которому будет осуществяться анимация.</p>
+            <p>Некоторые значения:</p>
+            <ul>
+               <li>ease - переход начинается медленно, разгоняется быстро и замедляется в конце.</li>
+               <li>ease-in - переход начинается медленно, а затем плавно ускоряется в конце.</li>
+               <li>ease-out - переход начинается быстро и плавно замедляется в конце.</li>
+               <li>ease-in-out - переход медленно начинается и медленно заканчивается.</li>
+               <li>linear - переход происходит равномерно на протяжении всего времени, без колебаний в скорости. </li>
+            </ul>
+            <div class="box">
+               <div class="example">
+                  <button class="button ease-btn">transition-timing-function: ease;</button>
+                  <button class="button ease-in-btn">transition-timing-function: ease-in</button>
+                  <button class="button ease-out-btn">transition-timing-function: ease-out</button>
+                  <button class="button ease-in-out-btn">transition-timing-function: ease-in-out;</button>
+                  <button class="button linear-btn">transition-timing-function: linear;</button>
+               </div>
+               <div class="display animate-object">
+                  <button style="transition-duration: 1s"
+                     class="timing-function-btn animate-btn-2 animate-object-btn">Наведи на меня</button>
+               </div>
+            </div>
+         </section>
+         <h3 class="transition-h3">transition</h3>
+         <section class="transition animate fadeInDown">
+            <p>Для элемента можно задать несколько последовательных переходов, перечислив их через запятую. Каждый
+               переход можно оформить своими значениями перехода. <br>
+               Синтаксис: <br>
+               transition: property duration timing-function delay</p>
+            <div class="box">
+               <div class="example">
+                  <label>transition: </label>
+                  <input style="min-width: 500px;" type="text" class="transition-input"
+                     value="background-color 1s ease 0.5s, padding 5s ease-out 0s"><br>
+               </div>
+               <div style="flex-basis: 30%; padding: 30px;" class="display animate-object">
+                  <button class="transition-btn animate-object__btn-1 animate-object__btn">Наведи на меня</button>
+               </div>
+            </div>
+         </section>
+
+
+         <h2>Анимация</h2>
+         <p>Использование конструкции animation и @keyframes позволяет создавать более сложные сценарии анимаций
+            (автоматическое воспроизведение, повторы, остановка по определенному событию).</p>
+         <h3 class="animation-name-h3">animation-name</h3>
+         <section class="animation-name">
+            <p>
+               Определяет список применяемых к элементу анимаций (ключевых кадров). Можно указать через запятую. Причем
+               приоритет у последней записи. Если нужно отменить анимацию, ставим значение none. animation-name: none;
+            </p>
+            <div class="box">
+               <code>
+                  <pre>
+                     .animation-circle{
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        background-color: #2ff0b0;
+                        position: relative;
+                        top: 200px;
+                        animation-name: circle;
+                        }   
+                        @keyframes circle{
+                     
+                           0%{
+                           left: 0px;
+                           }
+                     
+                           50%{
+                           border-radius: 0;
+                           }
+                     
+                           100%{
+                           left: 400px;
+                           background-color: #34d0ff;
+                           }
+                        }
+                  </pre>
+               </code>
+               <div style="display: block; padding: 0;" class="display">
+                  <div class="animation-circle"></div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="animation-duration-h3">animation-duration</h3>
+         <section class="animation-duration">
+            <p>Отвечает за продолжительность анимации. Значения указываются в s и ms</p>
+            <div class="box">
+               <div class="example">
+                  <label>animation-duration: </label>
+                  <input type="text" class="animation-duration-input" value="1s"><br>
+               </div>
+               <div style="display: block; padding: 0;" class="display">
+                  <div style="top: 0; margin: 30px 0;" class="animation-circle animation-duration-circle"></div>
+               </div>
+            </div>
+         </section>
+
+
+         <h3 class="animation-timing-function-h3">animation-timing-function</h3>
+         <section class="animation-timing-function animate fadeInDown">
+            <p>Задаёт стиль анимации, то есть сценарий, по которому она будет осуществяться.</p>
+            <p>Некоторые значения:</p>
+            <ul>
+               <li>ease - переход начинается медленно, разгоняется быстро и замедляется в конце.</li>
+               <li>ease-in - переход начинается медленно, а затем плавно ускоряется в конце.</li>
+               <li>ease-out - переход начинается быстро и плавно замедляется в конце.</li>
+               <li>ease-in-out - переход медленно начинается и медленно заканчивается.</li>
+               <li>linear - переход происходит равномерно на протяжении всего времени, без колебаний в скорости. </li>
+            </ul>
+            <div class="box">
+               <div class="example">
+                  <button class="button aease-btn">animation-timing-function: ease;</button>
+                  <button class="button aease-in-btn">animation-timing-function: ease-in</button>
+                  <button class="button aease-out-btn">animation-timing-function: ease-out</button>
+                  <button class="button aease-in-out-btn">animation-timing-function: ease-in-out;</button>
+                  <button class="button alinear-btn">animation-timing-function: linear;</button>
+               </div>
+               <div style="display: block; padding: 0;" class="display">
+                  <div style="top: 100px; margin: 30px 0; animation-duration: 2s;"
+                     class="animation-circle animation-timing-function-circle"></div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="iteration-count-h3">animation-iteration-count</h3>
+         <section class="iteration-count animate fadeInDown">
+            <p>Отвечает за количество повторов проигрывания анимации. Для бесконечного повторения используют
+               animation-iteration-count: infinite</p>
+            <div class="box">
+               <div class="example" style="flex-basis: 50%;">
+                  <label style="min-width: 250px;">animation-iteration-count: </label>
+                  <input type="text" class="iteration-count-input" value="1"><br>
+               </div>
+               <div style="display: block; padding: 0;" class="display">
+                  <div style="top: 0; margin: 30px 0; animation-duration: 1s;"
+                     class="animation-circle animation-iteration-count-circle"></div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="animation-direction-h3">animation-direction</h3>
+         <section class="animation-direction animate fadeInDown">
+            <p>Определяет направление и тип проигрывания ключевых кадров.</p>
+            <p>Значения:</p>
+            <ul>
+               <li>normal - ключевые кадры проиграются так, как они написаны.</li>
+               <li>reverse - кадры будут проигрываться в обратном порядке.</li>
+               <li>alternate - каждый чётный проход по кадрам будет проигрываться в обратном порядке.</li>
+               <li>alternate-reverse - каждый нечётный проход по кадрам будет проигрываться в обратном порядке.</li>
+            </ul>
+            <div class="box">
+               <div class="example">
+                  <button class="button normal">animation-direction: normal</button>
+                  <button class="button reverse">animation-direction: reverse</button>
+                  <button class="button alternate">animation-direction: alternate</button>
+                  <button class="button alternate-reverse">animation-direction: alternate-reverse</button>
+               </div>
+               <div style="display: block; padding: 0;" class="display">
+                  <div style="top: 60px; margin: 30px 0; animation-duration: 1s;"
+                     class="animation-circle animation-direction-circle"></div>
+               </div>
+            </div>
+
+         </section>
+
+         <h3 class="animation-play-state-h3">animation-play-state</h3>
+         <section class="animation-play-state animate fadeInDown">
+            <p>Позволяет запускать или останавливать анимацию</p>
+            <p>Значения:</p>
+            <ul>
+               <li>running (по умолчанию) - анимация проигрывается.</li>
+               <li>paused - анимация на паузе.</li>
+            </ul>
+            <div class="box">
+               <div class="example">
+                  <button class="button running">animation-play-state: running</button>
+                  <button class="button paused">animation-play-state: paused</button>
+               </div>
+               <div style="display: block; padding: 0;" class="display">
+                  <div style="top: 15px; margin: 30px 0; animation-duration: 1s;"
+                     class="animation-circle animation-play-state-circle"></div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="animation-delay-h3">animation-delay</h3>
+         <section class="animation-delay animate fadeInDown">
+            <p>Отвечает за задержку перед проигрыванием.</p>
+            <div class="box">
+               <div class="example">
+                  <label>animation-delay: </label>
+                  <input type="text" class="animation-delay-input" value="0.3s"><br>
+               </div>
+               <div style="display: block; padding: 0;" class="display">
+                  <div style="top: 15px; margin: 30px 0; animation-duration: 1s;"
+                     class="animation-circle animation-delay-circle"></div>
+               </div>
+            </div>
+         </section>
+
+         <h3 class="animation-fill-mode-h3">animation-fill-mode</h3>
+         <section class="animation-fill-mode animate fadeInDown">
+            <p>Определяет какие значения анимируемых css свойств применятся к объекту после завершения анимации.</p>
+            <p>Значения:</p>
+            <ul>
+               <li>none - никакие стили не применяются после анимации.</li>
+               <li>forwards - по окончании анимации элемент сохранит стили последнего ключевого кадра</li>
+               <li>backwards - по окончании анимации элемент сохранит стиль первого ключевого кадра</li>
+               <li>both - анимация будет вести себя так, как будто значения forwards и backwards заданы одновременно.
+               </li>
+            </ul>
+            <div class="box">
+               <div class="example">
+                  <button class="button none">animation-fill-mode: none</button>
+                  <button class="button forwards">animation-fill-mode: forwards</button>
+                  <button class="button backwards">animation-fill-mode: backwards</button>
+                  <button class="button both">animation-fill-mode: both</button>
+               </div>
+               <div style="display: block; padding: 0;" class="display">
+                  <div style="top: 50px; margin: 30px 0; animation-duration: 1s; animation-iteration-count: 2;"
+                     class="animation-circle animation-fill-mode-circle"></div>
+               </div>
+            </div>
+         </section>
+
+      </div>
+   </main>
+   <footer class="footer">
+
+   </footer>
+
+
+   <script src="js/transition.js">
+   </script>
+</body>
+
+</html>
